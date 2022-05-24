@@ -9,12 +9,12 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++11
 NAME = phonebook
 
 $(NAME) : $(OBJS)
-	$(CC) $(CPPFLAGS) -o $@ $^
+	$(CC) $(CPPFLAGS) $(OBJS) -o $@
 
 clean :
-	rm -rf $(OBJS)
+	-@rm -rf $(OBJS)
 
 fclean : clean
-	rm -rf $(NAME)
+	-@rm -rf $(NAME)
 
 re: fclean $(NAME)
