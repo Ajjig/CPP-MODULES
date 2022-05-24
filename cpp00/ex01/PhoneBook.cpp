@@ -30,3 +30,12 @@ PhoneBook::PhoneBook() {
         this -> contacts[i] = Contact();
     }
 }
+void PhoneBook::display() {
+    for (int i = 0; i < this -> contactCount; i++) {
+        std::cout << "=================== " << i + 1 << " ===================" << std::endl;
+        std::cout << "FULL NAME      : " << this -> contacts[i].getFirstName() + " " << contacts[i].getLastName() << std::endl;
+        std::cout << "NICKNAME       : " << this -> contacts[i].getNickName() << std::endl;
+        std::cout << "PHONE NUMBER   : " << this -> contacts[i].getPhoneNumber() << std::endl;
+        std::cout << "DARKEST SECRET : " << this -> contacts[i].getDarkestSecret() << std::endl;
+    }
+}
