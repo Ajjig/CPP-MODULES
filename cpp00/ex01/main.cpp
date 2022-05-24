@@ -14,6 +14,10 @@ int main(int ac, char **av) {
         std::cin >> choice;
         if (choice == 3)
             phoneBook.exit();
+        if (std::cin.good() == false) {
+            std::cerr << "Invalid input" << std::endl;
+            exit(1);
+        }
         else if (choice == 1) {
             std::cout << "Enter the first name: ";
             std::string firstName;
