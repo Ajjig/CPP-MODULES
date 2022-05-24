@@ -9,13 +9,15 @@ void PhoneBook::add(Contact contact) {
 
 void PhoneBook::search(str name) {
     for (int i = 0; i < this -> contactCount; i++) {
-        if (this -> contacts[i].getFirstName() == name)
+        if (this -> contacts[i].getFirstName() == name) {
             std::cout << "INDEX          : " << this -> contactCount << std::endl;
-            std::cout << "FULL NAME      : " << this -> contacts[i].getFirstName() << contacts[i].getLastName() << std::endl;
+            std::cout << "FULL NAME      : " << this -> contacts[i].getFirstName() + " " << contacts[i].getLastName() << std::endl;
             std::cout << "NICKNAME       : " << this -> contacts[i].getNickName() << std::endl;
             std::cout << "PHONE NUMBER   : " << this -> contacts[i].getPhoneNumber() << std::endl;
             std::cout << "DARKEST SECRET : " << this -> contacts[i].getDarkestSecret() << std::endl;
+        }
     }
+    std::cout << "No such contact" << std::endl;
     
 }
 void PhoneBook::exit() {
