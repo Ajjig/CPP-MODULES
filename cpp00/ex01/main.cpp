@@ -1,6 +1,6 @@
 #include "PhoneBook.hpp"
 
-int main(int ac, char **av) {
+int main(void) {
     int choice;
     PhoneBook phoneBook = PhoneBook();
     while (true) {
