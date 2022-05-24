@@ -8,6 +8,7 @@ int main(int ac, char **av) {
         std::cout << "[ 1 ] Add a contact" << std::endl;
         std::cout << "[ 2 ] Search a contact" << std::endl;
         std::cout << "[ 0 ] Exit" << std::endl;
+        std::cout << "Choice: ";
         std::cin >> choice;
         if (choice == 0)
             phoneBook.exit();
