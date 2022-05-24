@@ -24,6 +24,6 @@ void PhoneBook::exit() {
 PhoneBook::PhoneBook() {
     this -> contactCount = 0;
     for (int i = 0; i < 8; i++) {
-        this -> contacts[i] = Contact("", "", "", "", "");
+        this -> contacts[i] = Contact();
     }
 }

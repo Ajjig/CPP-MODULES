@@ -33,6 +33,13 @@ void Contact::setNickName(str nickName) {
 void Contact::setPhoneNumber(str phoneNumber) {
     this->phoneNumber = phoneNumber;
 }
+Contact::Contact() {
+    this -> firstName = "";
+    this -> lastName = "";
+    this -> nickName = "";
+    this -> phoneNumber = "";
+    this -> darkestSecret = "";
+}
 Contact::Contact(str fname, str lname, str nname, str pnumber, str dsecret) {
     this->firstName = fname;
     this->lastName = lname;
