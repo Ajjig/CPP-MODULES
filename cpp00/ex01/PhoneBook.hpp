@@ -5,6 +5,7 @@ class PhoneBook{
     private:
         Contact contacts[8];
         int contactCount;
+        bool isFull;
 
     public:
         PhoneBook();
