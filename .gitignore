@@ -5,3 +5,5 @@ megaphone
 *.o
 *.lib
 DS_Store
+phonebook
+bank
