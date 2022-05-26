@@ -37,10 +37,10 @@ void Account::displayStatus() const {
 }
 
 void Account::displayAccountsInfos() {
-    std::cout << "Nb of accounts created: " << _nbAccounts << std::endl;
-    std::cout << "Total amount of money created: " << _totalAmount << std::endl;
-    std::cout << "Total number of deposits: " << _totalNbDeposits << std::endl;
-    std::cout << "Total number of withdrawals: " << _totalNbWithdrawals << std::endl;
+    std::cout << "Nb of accounts created        : " << _nbAccounts << std::endl;
+    std::cout << "Total amount of money created : " << _totalAmount << std::endl;
+    std::cout << "Total number of deposits      : " << _totalNbDeposits << std::endl;
+    std::cout << "Total number of withdrawals   : " << _totalNbWithdrawals << std::endl;
 }
 
 Account::Account(int initial_deposit) {
