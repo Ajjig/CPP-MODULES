@@ -28,7 +28,10 @@ void PhoneBook::search() {
         std::cout << " | " << std::setw(10);
         std::cout << this -> contacts[i].getNickName() << std::endl;
     }
-    if (this -> contactCount == 0) std::cout << "No such contact" << std::endl;
+    if (this -> contactCount == 0) {
+        std::cout << "No such contact" << std::endl;
+        return;
+    }
     std::cout << "INDEX : ";
     std::cin >> index;
     if (index <= this -> contactCount - 1) {
