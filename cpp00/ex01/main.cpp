@@ -8,12 +8,11 @@ int main(void) {
         std::cout << "Choose an option: " << std::endl;
         std::cout << "[ 1 ] Add a contact" << std::endl;
         std::cout << "[ 2 ] Search a contact" << std::endl;
-        std::cout << "[ 3 ] Display contacts" << std::endl;
-        std::cout << "[ 4 ] Exit" << std::endl;
+        std::cout << "[ 3 ] Exit" << std::endl;
         std::cout << "===========================" << std::endl;
         std::cout << "Choice: ";
         std::cin >> choice;
-        if (choice == 4)
+        if (choice == 3)
             phoneBook.exit();
         if (std::cin.good() == false) {
             std::cerr << "Invalid input" << std::endl;
@@ -39,15 +38,7 @@ int main(void) {
             phoneBook.add(contact);
         }
         else if (choice == 2) {
-            std::cout << "Enter the name: ";
-            std::string name;
-            std::cin >> name;
-            phoneBook.search(name);
-            std::cin.get();
-        }
-        else if (choice == 3) {
-            phoneBook.display();
-            std::cin.get();
+            phoneBook.search();
         }
     }
 }

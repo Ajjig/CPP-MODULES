@@ -1,5 +1,6 @@
 #pragma once
 #include "Contact.hpp"
+#include <iomanip>
 
 class PhoneBook{
     private:
@@ -11,6 +12,6 @@ class PhoneBook{
         PhoneBook();
         void add(Contact contact);
         void exit();
-        void search(str name);
+        void search();
         void display();
 };
