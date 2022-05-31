@@ -2,7 +2,7 @@ CPPFILES = megaphone.cpp
 
 CC = g++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++11
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = megaphone
 
