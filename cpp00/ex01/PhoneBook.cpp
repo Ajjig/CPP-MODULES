@@ -3,7 +3,7 @@
 void PhoneBook::add(Contact contact) {
     if (this -> contactCount == 8) {
         this -> contactCount = 0;
-        this -> isFull = true;
+        this -> isFull = true; // if the contactCount is 8 then start replacing the oldest contact //
     }
     this -> contacts[contactCount] = contact;
     this -> contactCount++;
@@ -29,7 +29,7 @@ void PhoneBook::search() {
         std::cout << "No such contact" << std::endl;
         return;
     }
-    std::cout << "INDEX : ";
+    std::cout << "INDEX : "; // get the index of the contact to display full infos //
     std::cin >> index;
     if (index <= this -> contactCount - 1) {
         std::cout << "FIRST NAME: " << this -> contacts[index].getFirstName() << std::endl;
