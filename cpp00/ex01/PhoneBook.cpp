@@ -12,21 +12,21 @@ void PhoneBook::add(Contact contact) {
 void PhoneBook::search() {
     int limit = (this -> isFull) ? 8 : this -> contactCount;
     int index = 0;
-    std::cout << "INDEX" << std::setw(10);
+    std::cout << std::setw(10) << "INDEX";
     std::cout << " | ";
-    std::cout << "FIRST NAME" << std::setw(10);
+    std::cout << std::setw(10) << "FIRST NAME";
     std::cout << " | ";
-    std::cout << "LAST NAME" << std::setw(10);
+    std::cout << std::setw(10) << "LAST NAME" ;
     std::cout << " | ";
-    std::cout << "NICKNAME" << std::endl;
+    std::cout << std::setw(10) << "NICKNAME" << std::endl;
     for (int i = 0; i < limit; i++){
-        std::cout << i << std::setw(10);
-        std::cout << " | " << std::setw(10);
-        std::cout << this -> contacts[i].getFirstName() << std::setw(10);
-        std::cout << " | " << std::setw(10);
-        std::cout << this -> contacts[i].getLastName() << std::setw(10);
-        std::cout << " | " << std::setw(10);
-        std::cout << this -> contacts[i].getNickName() << std::endl;
+        std::cout << std::setw(10) << i;
+        //std::cout << std::setw(10) << " | " ;
+        std::cout << std::setw(13) << this -> contacts[i].getFirstName();
+        //std::cout << std::setw(10) << " | ";
+        std::cout << std::setw(13) << this -> contacts[i].getLastName();
+        //std::cout << std::setw(10) << " | ";
+        std::cout << std::setw(13) << this -> contacts[i].getNickName() << std::endl;
     }
     if (this -> contactCount == 0) {
         std::cout << "No such contact" << std::endl;
