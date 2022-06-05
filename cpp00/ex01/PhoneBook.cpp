@@ -21,11 +21,8 @@ void PhoneBook::search() {
     std::cout << std::setw(10) << "NICKNAME" << std::endl;
     for (int i = 0; i < limit; i++){
         std::cout << std::setw(10) << i;
-        //std::cout << std::setw(10) << " | " ;
         std::cout << std::setw(13) << this -> contacts[i].getFirstName();
-        //std::cout << std::setw(10) << " | ";
         std::cout << std::setw(13) << this -> contacts[i].getLastName();
-        //std::cout << std::setw(10) << " | ";
         std::cout << std::setw(13) << this -> contacts[i].getNickName() << std::endl;
     }
     if (this -> contactCount == 0) {
