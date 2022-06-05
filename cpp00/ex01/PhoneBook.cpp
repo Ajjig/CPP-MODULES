@@ -35,13 +35,11 @@ void PhoneBook::search() {
     std::cout << "INDEX : ";
     std::cin >> index;
     if (index <= this -> contactCount - 1) {
-        std::cout << std::setw(10) << index;
-        std::cout << std::setw(10) << "|";
-        std::cout << std::setw(10) << this -> contacts[index].getFirstName();
-        std::cout << std::setw(10) << "|";
-        std::cout << std::setw(10) << this -> contacts[index].getLastName();
-        std::cout << std::setw(10) << "|";
-        std::cout << std::setw(10) << this -> contacts[index].getNickName() << std::endl;
+        std::cout << "FIRST NAME: " << this -> contacts[index].getFirstName() << std::endl;
+        std::cout << "LAST NAME : " << this -> contacts[index].getLastName() << std::endl;
+        std::cout << "NICKNAME  : " << this -> contacts[index].getNickName() << std::endl;
+        std::cout << "PHONE NUM : " << this -> contacts[index].getPhoneNumber() << std::endl;
+        std::cout << "SECRET    : " << this -> contacts[index].getDarkestSecret() << std::endl;
     }
     else std::cout << "No such contact" << std::endl;
 }
