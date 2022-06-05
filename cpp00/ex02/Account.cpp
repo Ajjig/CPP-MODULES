@@ -29,7 +29,7 @@ int Account::checkAmount() const {
 
 void Account::_displayTimestamp() {
     time_t rawTime = std::time(nullptr);
-	std::cout << std::put_time(std::localtime(&rawTime), "[%y%m%d_%OH%OM%OS] ");
+	std::cout << std::put_time(std::localtime(&rawTime), "[%Y%m%d_%OH%OM%OS] ");
 
 }
 
