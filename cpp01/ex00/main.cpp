@@ -8,6 +8,14 @@ Zombie *newZombie() {
     return zombie;
 }
 
+void randomChump( std::string name ) {
+    string name;
+    std::cout << "Enter zombie name: ";
+    std::cin >> name;
+    Zombie zombie(name);
+    zombie.announce();
+}
+
 int main( void ) {
     
 }
