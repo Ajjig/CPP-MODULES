@@ -5,8 +5,8 @@ Zombie *newZombie(string _name) {
     return zombie;
 }
 
-void randomChump( std::string _name ) {
-    Zombie zombie(name);
+void randomChump( string _name ) {
+    Zombie zombie(_name);
     zombie.announce();
 }
 
@@ -14,6 +14,6 @@ int main( void ) {
     Zombie *heapZombie = newZombie("Fooo");
     heapZombie->announce();
     delete heapZombie;
-    Zombie *stackZombie = randomChump("Foo's dad");
+    /* Stack zombie */ randomChump("Foo's dad");
     return 0;
 }
