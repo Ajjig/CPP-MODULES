@@ -10,7 +10,7 @@ class Zombie
     public:
         Zombie(string name);
         Zombie();
-        ~Zombie() {};
+        ~Zombie();
         void announce();
 };
 
