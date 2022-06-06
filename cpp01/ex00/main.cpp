@@ -11,5 +11,9 @@ void randomChump( std::string _name ) {
 }
 
 int main( void ) {
-    
+    Zombie *heapZombie = newZombie("Fooo");
+    heapZombie->announce();
+    delete heapZombie;
+    Zombie *stackZombie = randomChump("Foo's dad");
+    return 0;
 }
