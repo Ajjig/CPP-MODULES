@@ -1,12 +1,12 @@
 NAME = zombie
 
-SRCS = zombie.cpp main.cpp
+SRCS = Zombie.cpp main.cpp
 
-INC = zombie.hpp
+INC = Zombie.hpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-CC = g++
+CC = c++
 
 OBJS = $(SRCS:.cpp=.o)
 
