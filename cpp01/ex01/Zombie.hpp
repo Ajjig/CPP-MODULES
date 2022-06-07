@@ -11,6 +11,7 @@ class Zombie
         Zombie(string name);
         Zombie();
         ~Zombie();
+        void setName(string name);
         void announce();
 };
 
