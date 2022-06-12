@@ -1,4 +1,5 @@
 #include "HumanA.hpp"
+#include "HumanB.hpp"
 
 void testCase1() {
     Weapon club = Weapon("crude spiked club");
