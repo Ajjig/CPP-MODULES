@@ -1,0 +1,12 @@
+CPPFILES = main.cpp
+
+CPPCOMPILER = c++
+
+NAME = exe
+
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+
+OBJS = $(CPPFILES:.cpp=.o)
+
+$(NAME): $(OBJS)
+	$(CPPCOMPILER) $(CPPFLAGS) $(OBJS) -o $(NAME)
