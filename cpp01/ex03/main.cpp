@@ -18,8 +18,14 @@ void testCase2() {  ///// Sample test case
     jim.attack();
 }
 
+void testcase3() {  ///// NO weapon test case
+    HumanB h1("ms3oozzz");
+    h1.attack();
+}
+
 int main()
 {
     testCase1();
     testCase2();
+    testcase3();
 }
