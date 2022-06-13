@@ -1,7 +1,7 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-void testCase1() {
+void testCase1() {  ///// Sample test Case
     Weapon club = Weapon("crude spiked club");
     HumanA bob("Bob", club);
     bob.attack();
@@ -9,7 +9,7 @@ void testCase1() {
     bob.attack();
 }
 
-void testCase2() {
+void testCase2() {  ///// Sample test case
     Weapon club = Weapon("crude spiked club");
     HumanB jim("Jim");
     jim.setWeapon(club);
