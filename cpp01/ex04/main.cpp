@@ -14,14 +14,6 @@ string stringReplace(string str, string oldStr, string newStr) {
     return str;
 }
 
-string addDotReplace(char *ptr) {
-    string str = "";
-    for (int i = 0; ptr[i] ; ++i) {
-        str += ptr[i];
-    }
-    return str + ".replace";
-}
-
 int main(int ac, char **av)
 {
     if (ac != 4) {
@@ -29,8 +21,9 @@ int main(int ac, char **av)
         std::cout << "Usage: " << av[0] << " {filename} {to replace string} {replaced with}" << std::endl;
         return 0;
     }
+    string fileName = av[1];
     std::ifstream ifile;
-    std::ofstream ofile(addDotReplace(av[1]));
+    std::ofstream ofile(fileName + ".replace");
     ifile.open(av[1]);
     //ifile.open(addDotReplace(av[1]), std::fstream::out);
     if (ifile.is_open() == false) {
