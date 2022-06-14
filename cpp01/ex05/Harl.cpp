@@ -21,8 +21,6 @@ void Harl::warning() {
     std::cout << "I think I deserve to have some extra bacon for free. I've been coming for years whereas you started working here since last month." << std::endl;
 }
 
-
-
 void Harl::complain(string level) {
     typedef void (Harl::*fts_ptr)( void ) ;
     string levels[] = {"debug", "info", "warning", "error"};
