@@ -42,6 +42,7 @@ void Harl::complain(string level) {
             (this->*fts[i])();
             break;
         default:
+            std::cout << "[ Probably complaining about insignificant problems ]" << level << std::endl;
             break;
     }
 }
