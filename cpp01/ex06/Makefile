@@ -1,14 +1,14 @@
 CPPFILES = main.cpp Harl.cpp
 
 CPPCOMPILER = c++
-
+INC = Harl.hpp
 NAME = harlFilter
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJS = $(CPPFILES:.cpp=.o)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(INC)
 	$(CPPCOMPILER) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean :
