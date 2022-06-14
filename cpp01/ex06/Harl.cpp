@@ -25,10 +25,23 @@ void Harl::complain(string level) {
     typedef void (Harl::*fts_ptr)( void ) ;
     string levels[] = {"debug", "info", "warning", "error"};
     fts_ptr fts[] = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
-    for (int i = 0; i < 4; ++i) {
-        if (levels[i] == level) {
+    int i;
+    for (i = 0; i < 4 && levels[i] != level; ++i) {}
+    switch (i)
+    {
+        case 0:
             (this->*fts[i])();
-            return;
-        }
+            break;
+        case 1:
+            (this->*fts[i])();
+            break;
+        case 2:
+            (this->*fts[i])();
+            break;
+        case 3:
+            (this->*fts[i])();
+            break;
+        default:
+            break;
     }
 }
