@@ -7,7 +7,7 @@ int main( void ) {
     std::string &str_ref = str;
 
     std::cout << "&str == " << &str << std::endl;
-    std::cout << "&ptr == " << &str_ptr << std::endl;
+    std::cout << "&ptr == " << str_ptr << std::endl;
     std::cout << "&ref == " << &str_ref << std::endl;
 
     std::cout << "=======================" << std::endl;
