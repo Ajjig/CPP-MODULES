@@ -2,7 +2,7 @@ CPPFILES = main.cpp Harl.cpp
 
 CPPCOMPILER = c++
 
-NAME = Harl
+NAME = harlFilter
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
