@@ -10,9 +10,9 @@ CC = c++
 
 OBJS = $(SRCS:.cpp=.o)
 
-all : $(NAME) 
+all : $(NAME)
 
-$(NAME) : $(OBJS) 
+$(NAME) : $(OBJS) $(INC)
 	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean :

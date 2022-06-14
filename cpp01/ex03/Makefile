@@ -4,11 +4,13 @@ CPPCOMPILER = c++
 
 NAME = exe
 
+INC = HumanA.hpp HumanB.hpp Weapon.hpp
+
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJS = $(CPPFILES:.cpp=.o)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(INC)
 	$(CPPCOMPILER) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean :
