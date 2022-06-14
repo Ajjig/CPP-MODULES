@@ -40,7 +40,7 @@ void Harl::complain(string level) {
             break;
         
         default:
-            std::cout << "[ Probably complaining about insignificant problems ]" << level << std::endl;
+            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
             break;
     }
 }
