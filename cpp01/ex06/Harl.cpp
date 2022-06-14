@@ -23,7 +23,7 @@ void Harl::warning() {
 
 void Harl::complain(string level) {
     typedef void (Harl::*fts_ptr)( void ) ;
-    string levels[] = {"debug", "info", "warning", "error"};
+    string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     fts_ptr fts[] = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
     int i;
     for (i = 0; i < 4 && levels[i] != level; ++i) {}

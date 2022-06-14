@@ -1,15 +1,10 @@
 #include "Harl.hpp"
 
-int main ( void ) {
+int main ( int ac, char **av ) {
     Harl h;
-    std::cout << "debug :" << std::endl;
-    h.complain("debug");
-    std::cout << "info :" << std::endl;
-    h.complain("info");
-    std::cout << "warning :" << std::endl;
-    h.complain("warning");
-    std::cout << "error :" << std::endl;
-    h.complain("error");
-    std::cout << "invalid :" << std::endl;
-    h.complain("invalid");
+    if (ac != 2) {
+        std::cerr << "Usage: " << av[0] << " {level}" << std::endl;
+        return 0;
+    }
+    h.complain(av[1]);
 }
