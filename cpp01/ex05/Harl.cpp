@@ -27,7 +27,7 @@ void Harl::complain(string level) {
     fts_ptr fts[] = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
     for (int i = 0; i < 4; ++i) {
         if (levels[i] == level) {
-            (this -> *fts[i])();
+            (this->*fts[i])();
             return;
         }
     }
