@@ -1,6 +1,6 @@
 NAME = zombie
 
-SRCS = Zombie.cpp main.cpp
+SRCS = Zombie.cpp main.cpp newZombie.cpp
 
 INC = Zombie.hpp
 

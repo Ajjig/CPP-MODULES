@@ -14,3 +14,4 @@ class Zombie
         void announce();
 };
 
+Zombie *newZombie(string _name);
