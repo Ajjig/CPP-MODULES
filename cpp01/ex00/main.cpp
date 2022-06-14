@@ -1,10 +1,5 @@
 #include "Zombie.hpp"
 
-Zombie *newZombie(string _name) {
-    Zombie *zombie = new Zombie(_name);
-    return zombie;
-}
-
 void randomChump( string _name ) {
     Zombie zombie(_name);
     zombie.announce();
