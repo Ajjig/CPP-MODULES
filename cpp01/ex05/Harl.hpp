@@ -12,4 +12,4 @@ class Harl {
         void warning();
         void error();
         void debug();
-}
+};
