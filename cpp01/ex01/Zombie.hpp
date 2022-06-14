@@ -15,3 +15,5 @@ class Zombie
         void announce();
 };
 
+Zombie* zombieHorde( int N, string name ):
+Zombie *newZombie(string _name);
