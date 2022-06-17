@@ -31,8 +31,12 @@ Fixed & Fixed::operator = (const Fixed &fixed) {
     return *this;
 }
 
-/* * * * * * * * * * * * * EX01 * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * EX01 * * * * * * * * * * * * * * * */
 
 Fixed::Fixed(const int _value) {
     this -> value = _value << nBits;
+}
+
+Fixed::Fixed(const float _value) {
+    this -> value = (int) _value << nBits;
 }
