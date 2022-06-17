@@ -51,7 +51,8 @@ float Fixed::toFloat() const {
     return (float) value / (float) (1 << nBits); // 2 ^ nBits
 }
 
-std::ostream operator << (std::ostream & out, Fixed & fx) {
+std::ostream &operator<<(std::ostream & out, Fixed const & fx)
+{
     out << fx.toFloat();
     return out;
 }
