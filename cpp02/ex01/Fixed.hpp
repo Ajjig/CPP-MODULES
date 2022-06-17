@@ -17,4 +17,7 @@ class Fixed {
         void setRawBits(int const raw);
         Fixed & operator = (const Fixed &fixed);
         Fixed & operator + (const Fixed &fixed);
+        int toInt() const;
+        float toFloat() const;
+        std::ostream & operator << (std::ostream & stream, Fixed & fx);
 };

@@ -1,5 +1,7 @@
 #include "Fixed.hpp"
 
+/* * * * * * * * * * * * * * * * EX00 * * * * * * * * * * * * * * * */
+
 int Fixed::nBits = 8;
 
 Fixed::Fixed() : value(0) {
@@ -38,5 +40,18 @@ Fixed::Fixed(const int _value) {
 }
 
 Fixed::Fixed(const float _value) {
-    this -> value = (int) _value << nBits;
+    this -> value = (int) roundf(_value) << nBits;
+}
+
+int Fixed::toInt() const {
+    return (int) value >> nBits;
+}
+
+float Fixed::toFloat() const {
+    return (float) value / (float) (1 << nBits); // 2 ^ nBits
+}
+
+std::ostream operator << (std::ostream & out, Fixed & fx) {
+    out << fx.toFloat();
+    return out;
 }
