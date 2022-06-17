@@ -4,7 +4,7 @@ INC = Fixed.hpp
 
 CPPCOMPILER = c++
 
-NAME = exe
+NAME = fixed
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
