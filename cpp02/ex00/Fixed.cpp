@@ -17,7 +17,7 @@ void Fixed::setRawBits(int const raw) {
 }
 
 Fixed::~Fixed() {
-    std::cout << "Destroyed" << std::endl;
+    std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &fixed) : value(fixed.value) {
