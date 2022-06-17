@@ -30,3 +30,9 @@ Fixed & Fixed::operator = (const Fixed &fixed) {
     std::cout << "Copy Assignation operator called" << std::endl;
     return *this;
 }
+
+/* * * * * * * * * * * * * EX01 * * * * * * * * * * * * */
+
+Fixed::Fixed(const int _value) {
+    this -> value = _value << nBits;
+}
