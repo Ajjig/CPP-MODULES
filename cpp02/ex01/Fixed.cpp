@@ -36,10 +36,12 @@ Fixed & Fixed::operator = (const Fixed &fixed) {
 /* * * * * * * * * * * * * * * * EX01 * * * * * * * * * * * * * * * */
 
 Fixed::Fixed(const int _value) {
+    std::cout << "Int constructor called" << std::endl;
     this -> value = _value << nBits;
 }
 
 Fixed::Fixed(const float _value) {
+    std::cout << "Float constructor called" << std::endl;
     this -> value = (int) roundf((_value * (1 << nBits)));
 }
 
