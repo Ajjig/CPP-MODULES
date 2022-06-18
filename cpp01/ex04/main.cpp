@@ -35,4 +35,6 @@ int main(int ac, char **av)
     while (getline(ifile, line)) {
         ofile << stringReplace(line, av[2], av[3]) << std::endl;
     }
+    ifile.close();
+    ofile.close();
 }
