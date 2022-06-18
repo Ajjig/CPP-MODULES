@@ -16,9 +16,26 @@ class Fixed {
         int getRawBits();
         void setRawBits(int const raw);
         Fixed & operator = (const Fixed &fixed);
-        Fixed & operator + (const Fixed &fixed);
         int toInt() const;
         float toFloat() const;
+        // COMPARISON OPERATORS
+        bool operator > (const Fixed &fixed);
+        bool operator < (const Fixed &fixed);
+        bool operator >= (const Fixed &fixed);
+        bool operator <= (const Fixed &fixed);
+        bool operator == (const Fixed &fixed);
+        bool operator != (const Fixed &fixed);
+        // ARITHMETIC OPERATORS
+        Fixed & operator ++ ();  // Pre
+        Fixed & operator -- ();  // Pre
+        Fixed operator ++ (int); // Post
+        Fixed operator -- (int); // Post
+        Fixed operator + (const Fixed &fixed);
+        Fixed operator - (const Fixed &fixed);
+        Fixed operator * (const Fixed &fixed);
+        Fixed operator / (const Fixed &fixed);
+        
+
         
 };
 
