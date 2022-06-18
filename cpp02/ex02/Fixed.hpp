@@ -19,21 +19,27 @@ class Fixed {
         int toInt() const;
         float toFloat() const;
         // COMPARISON OPERATORS
-        bool operator > (const Fixed &fixed);
-        bool operator < (const Fixed &fixed);
-        bool operator >= (const Fixed &fixed);
-        bool operator <= (const Fixed &fixed);
-        bool operator == (const Fixed &fixed);
-        bool operator != (const Fixed &fixed);
+        bool operator > (const Fixed &fixed) const;
+        bool operator < (const Fixed &fixed) const;
+        bool operator >= (const Fixed &fixed) const;
+        bool operator <= (const Fixed &fixed) const;
+        bool operator == (const Fixed &fixed) const;
+        bool operator != (const Fixed &fixed) const;
         // ARITHMETIC OPERATORS
         Fixed & operator ++ ();  // Pre
         Fixed & operator -- ();  // Pre
         Fixed operator ++ (int); // Post
         Fixed operator -- (int); // Post
-        Fixed operator + (const Fixed &fixed);
-        Fixed operator - (const Fixed &fixed);
-        Fixed operator * (const Fixed &fixed);
-        Fixed operator / (const Fixed &fixed);
+        Fixed operator + (const Fixed &fixed) const;
+        Fixed operator - (const Fixed &fixed) const;
+        Fixed operator * (const Fixed &fixed) const;
+        Fixed operator / (const Fixed &fixed) const;
+
+        // STATIC MEMBER
+        static Fixed & min(Fixed &fixed1, Fixed &fixed2);
+        static Fixed & max(Fixed &fixed1, Fixed &fixed2);
+        static Fixed const & min(Fixed const &fixed1, Fixed const &fixed2);
+        static Fixed const & max(Fixed const &fixed1, Fixed const &fixed2);
         
 
         
