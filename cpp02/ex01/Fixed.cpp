@@ -40,7 +40,7 @@ Fixed::Fixed(const int _value) {
 }
 
 Fixed::Fixed(const float _value) {
-    this -> value = (int) roundf(_value) << nBits;
+    this -> value = (int) roundf((_value * (1 << nBits)));
 }
 
 int Fixed::toInt() const {
@@ -48,10 +48,10 @@ int Fixed::toInt() const {
 }
 
 float Fixed::toFloat() const {
-    return (float) value / (float) (1 << nBits); // 2 ^ nBits
+    return (float) value / (1 << nBits);
 }
 
-std::ostream &operator<<(std::ostream & out, Fixed const & fx)
+std::ostream & operator << (std::ostream & out, Fixed const & fx)
 {
     out << fx.toFloat();
     return out;
