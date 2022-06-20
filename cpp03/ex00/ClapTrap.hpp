@@ -14,6 +14,5 @@ class ClapTrap {
         string name;
         unsigned int hitPoints;
         unsigned int energyPoints;
-        unsigned int damage;
 
 };
