@@ -7,6 +7,10 @@ ClapTrap::ClapTrap(string name) {
     std::cout << "Constructor called" << std::endl;
 }
 
+ClapTrap::~ClapTrap() {
+    std::cout << "Destructor called" << std::endl;
+}
+
 void ClapTrap::attack(const string & target) {
     std::cout << "ClapTrap " << this -> name << " attacks " << target << std::endl;
 }
