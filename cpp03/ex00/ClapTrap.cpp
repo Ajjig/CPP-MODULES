@@ -1,5 +1,7 @@
 #include "ClapTrap.hpp"
 
+/* * * * * * * CONSTRUCTORS * * * * * * */
+
 ClapTrap::ClapTrap(string name) {
     this -> name = name;
     this -> hitPoints = 10;
@@ -7,9 +9,13 @@ ClapTrap::ClapTrap(string name) {
     std::cout << "Constructor called" << std::endl;
 }
 
+/* * * * * * * DESTRUCTOR * * * * * * */
+
 ClapTrap::~ClapTrap() {
     std::cout << "Destructor called" << std::endl;
 }
+
+/* * * * * * * METHODS * * * * * * */
 
 void ClapTrap::attack(const string & target) {
     std::cout << "ClapTrap " << this -> name << " attacks " << target << std::endl;
