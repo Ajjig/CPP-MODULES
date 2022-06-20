@@ -10,6 +10,8 @@ class ClapTrap {
         void takeDamage(unsigned int damageAmount);
         void beRepaired(unsigned int repairAmount);
         void setName(string name);
+        void setAttackDamage(unsigned int attackDamage);
+        unsigned int getAttackDamage();
         string getName( void );
         ~ClapTrap();
     private:

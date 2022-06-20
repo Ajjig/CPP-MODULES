@@ -54,3 +54,11 @@ void ClapTrap::setName(string _name) {
 string ClapTrap::getName( void ) {
     return name;
 }
+
+unsigned int ClapTrap::getAttackDamage( void ) {
+    return this -> attackDamage;
+}
+
+void ClapTrap::setAttackDamage(unsigned int _attackDamage) {
+    this -> attackDamage = _attackDamage;
+}
