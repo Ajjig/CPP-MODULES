@@ -35,6 +35,6 @@ void ClapTrap::beRepaired(unsigned int repairAmount) {
 
 void ClapTrap::setName(string _name) : name(_name) {}
 
-string ClapTrap::getName(string name) {
+string ClapTrap::getName( void ) {
     return name;
 }
