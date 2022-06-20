@@ -6,6 +6,7 @@ ClapTrap::ClapTrap(string name) {
     this -> name = name;
     this -> hitPoints = 10;
     this -> energyPoints = 0;
+    this -> attackDamage = 0;
     std::cout << "Constructor called" << std::endl;
 }
 
@@ -18,7 +19,7 @@ ClapTrap::~ClapTrap() {
 /* * * * * * * METHODS * * * * * * */
 
 void ClapTrap::attack(const string & target) {
-    std::cout << "ClapTrap " << this -> name << " attacks " << target << std::endl;
+    std::cout << "ClapTrap " << this -> name << " attacks " << target << " causing " << this -> attackDamage << " damage" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int damageAmount) {
