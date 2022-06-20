@@ -33,7 +33,9 @@ void ClapTrap::beRepaired(unsigned int repairAmount) {
 
 /* * * * * * * SETTERS / GETTERS * * * * * * */
 
-void ClapTrap::setName(string _name) : name(_name) {}
+void ClapTrap::setName(string _name) {
+    this -> name = _name;
+}
 
 string ClapTrap::getName( void ) {
     return name;
