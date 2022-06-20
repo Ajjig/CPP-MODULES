@@ -9,7 +9,7 @@ class ClapTrap {
         void attack(const string & target);
         void takeDamage(unsigned int damageAmount);
         void beRepaired(unsigned int repairAmount);
-        void setName();
+        void setName(string name);
         string getName( void );
         ~ClapTrap();
     private:
