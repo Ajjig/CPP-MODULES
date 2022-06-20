@@ -9,6 +9,8 @@ class ClapTrap {
         void attack(const string & target);
         void takeDamage(unsigned int damageAmount);
         void beRepaired(unsigned int repairAmount);
+        void setName();
+        string getName(string name);
         ~ClapTrap();
     private:
         string name;

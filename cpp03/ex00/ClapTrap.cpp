@@ -24,3 +24,11 @@ void ClapTrap::beRepaired(unsigned int repairAmount) {
     std::cout << "ClapTrap " << this -> name << " is repaired for " << repairAmount << std::endl;
     this -> hitPoints += repairAmount;
 }
+
+/* * * * * * * SETTERS / GETTERS * * * * * * */
+
+void ClapTrap::setName(string _name) : name(_name) {}
+
+string ClapTrap::getName(string name) {
+    return name;
+}
