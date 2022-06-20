@@ -24,7 +24,7 @@ void ClapTrap::attack(const string & target) {
 
 void ClapTrap::takeDamage(unsigned int damageAmount) {
     std::cout << "ClapTrap " << this -> name << " takes " << damageAmount << " damage" << std::endl;
-    if (this -> healthPoints <= damageAmount) { // protection against negative HP
+    if (this -> hitPoints <= damageAmount) { // protection against negative HP
         std::cout << "ClapTrap " << this -> name << " is dead" << std::endl;
         this -> hitPoints = 0;
         return;
