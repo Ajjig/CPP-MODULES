@@ -19,7 +19,12 @@ ClapTrap::~ClapTrap() {
 /* * * * * * * METHODS * * * * * * */
 
 void ClapTrap::attack(const string & target) {
+    if (this -> energyPoints == 0) {
+        std::cout << "ClapTrap " << this -> name << " is out of energy" << std::endl;
+        return;
+    }
     std::cout << "ClapTrap " << this -> name << " attacks " << target << " causing " << this -> attackDamage << " damage" << std::endl;
+    this -> energyPoints -= 1;
 }
 
 void ClapTrap::takeDamage(unsigned int damageAmount) {
