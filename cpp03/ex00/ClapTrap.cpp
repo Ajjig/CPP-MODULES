@@ -30,6 +30,9 @@ void ClapTrap::takeDamage(unsigned int damageAmount) {
 void ClapTrap::beRepaired(unsigned int repairAmount) {
     std::cout << "ClapTrap " << this -> name << " is repaired for " << repairAmount << std::endl;
     this -> hitPoints += repairAmount;
+    if (this -> hitPoints > 10) {
+        this -> hitPoints = 10;
+    }
 }
 
 /* * * * * * * SETTERS / GETTERS * * * * * * */
