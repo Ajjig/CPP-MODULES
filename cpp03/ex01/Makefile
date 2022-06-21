@@ -4,7 +4,7 @@ INC = ClapTrap.hpp ScavTrap.hpp
 
 CPPCOMPILER = c++
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
