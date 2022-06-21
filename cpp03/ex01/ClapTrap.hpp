@@ -14,7 +14,7 @@ class ClapTrap {
         unsigned int getAttackDamage();
         string getName( void );
         ~ClapTrap();
-    private:
+    protected:
         string name;
         unsigned int hitPoints;
         unsigned int energyPoints;
