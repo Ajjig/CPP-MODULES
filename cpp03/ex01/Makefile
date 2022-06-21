@@ -1,6 +1,6 @@
-CPPFILES = main.cpp ClapTrap.cpp
+CPPFILES = main.cpp ClapTrap.cpp ScavTrap.cpp
 
-INC = ClapTrap.hpp
+INC = ClapTrap.hpp ScavTrap.hpp
 
 CPPCOMPILER = c++
 
