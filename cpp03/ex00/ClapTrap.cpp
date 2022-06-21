@@ -70,3 +70,15 @@ unsigned int ClapTrap::getAttackDamage( void ) {
 void ClapTrap::setAttackDamage(unsigned int _attackDamage) {
     this -> attackDamage = _attackDamage;
 }
+
+/* * * * * * * OPERATORS * * * * * * */
+
+ClapTrap & ClapTrap::operator = (ClapTrap const & ct) {
+    if (this == &ct)
+        return *this;
+    this -> name = ct.name;
+    this -> hitPoints = ct.hitPoints;
+    this -> energyPoints = ct.energyPoints;
+    this -> attackDamage = ct.attackDamage;
+    return *this;
+}

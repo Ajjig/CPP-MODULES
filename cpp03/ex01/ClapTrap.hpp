@@ -15,6 +15,7 @@ class ClapTrap {
         unsigned int getAttackDamage();
         string getName( void );
         ~ClapTrap();
+        ClapTrap & operator = (ClapTrap const & ct);
     protected:
         string name;
         unsigned int hitPoints;
