@@ -10,6 +10,14 @@ ClapTrap::ClapTrap(string name) {
     std::cout << "Constructor called" << std::endl;
 }
 
+ClapTrap::ClapTrap( void ) {
+    this -> name = "";
+    this -> hitPoints = 10;
+    this -> energyPoints = 0;
+    this -> attackDamage = 0;
+    std::cout << "Constructor called" << std::endl;
+}
+
 /* * * * * * * DESTRUCTOR * * * * * * */
 
 ClapTrap::~ClapTrap() {

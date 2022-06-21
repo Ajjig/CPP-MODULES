@@ -6,6 +6,7 @@
 class ClapTrap {
     public:
         ClapTrap(string name);
+        ClapTrap( void );
         void attack(const string & target);
         void takeDamage(unsigned int damageAmount);
         void beRepaired(unsigned int repairAmount);
