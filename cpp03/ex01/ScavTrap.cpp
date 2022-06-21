@@ -15,6 +15,6 @@ ScavTrap::~ScavTrap() {
     std::cout << "ScavTrap destructor called" << std::endl;
 }
 
-void ScavTrap::guardGate(const string & target) {
+void ScavTrap::guardGate( void ) {
     std::cout << this -> name << "is in gate keeper mode !" << std::endl;
 }
