@@ -10,4 +10,6 @@ class DiamondTrap : public ScavTrap, public FragTrap{
         void whoAmI();
         DiamondTrap & operator = (DiamondTrap & dt);
         DiamondTrap(DiamondTrap & dt);
+    private :
+        string name;
 };
