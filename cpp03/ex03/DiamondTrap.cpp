@@ -26,10 +26,11 @@ DiamondTrap & DiamondTrap::operator = (DiamondTrap & dt) {
     this -> hitPoints = dt.hitPoints;
     this -> energyPoints = dt.energyPoints;
     this -> attackDamage = dt.attackDamage;
-    return *this
+    std::cout << "Copy operator called" << std::endl;
+    return *this;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap & ft) {
+DiamondTrap::DiamondTrap(DiamondTrap & dt) {
     *this = dt;
     std::cout << "copy constructor called" << std::endl;
 }
