@@ -18,3 +18,14 @@ void DiamondTrap::attack( string & target ) {
         return ;
     std::cout << "DiamondTrap " << this -> name << " attacks" << target << std::endl;
 }
+
+DiamondTrap & DiamondTrap::operator = (DiamondTrap & dt) {
+    if (this == &dt)
+        return *this;
+    this -> name = dt.name;
+    this -> hitPoints = dt.hitPoints;
+    this -> energyPoints = dt.energyPoints;
+    this -> attackDamage = dt.attackDamage;
+    return *this
+}
+
