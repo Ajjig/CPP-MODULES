@@ -1,10 +1,10 @@
-CPPFILES = main.cpp ClapTrap.cpp ScavTrap.cpp
+CPPFILES = main.cpp ClapTrap.cpp FragTrap.cpp
 
-INC = ClapTrap.hpp ScavTrap.hpp
+INC = ClapTrap.hpp FragTrap.hpp
 
 CPPCOMPILER = c++
 
-NAME = ScavTrap
+NAME = FragTrap
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
