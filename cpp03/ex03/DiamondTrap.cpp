@@ -9,6 +9,15 @@ DiamondTrap::DiamondTrap(string _name) {
     std::cout << "DiamondTrap constructor called" << std::endl;
 }
 
+DiamondTrap::DiamondTrap( void ) {
+    this -> ClapTrap::name = "";
+    this -> name = "";
+    this -> hitPoints = FragTrap::hitPoints;
+    this -> energyPoints = ScavTrap::energyPoints;
+    this -> attackDamage = FragTrap::attackDamage;
+    std::cout << "DiamondTrap constructor called" << std::endl;
+}
+
 DiamondTrap::~DiamondTrap() {
     std::cout << "DiamondTrap destructor called" << std::endl;
 }
