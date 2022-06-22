@@ -1,7 +1,7 @@
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(string _name) {
-    ClapTrap::name = _name + "_clap_name";
+    this -> ClapTrap::name = _name + "_clap_name";
     this -> name = _name;
     this -> hitPoints = FragTrap::hitPoints;
     this -> energyPoints = ScavTrap::energyPoints;
@@ -33,4 +33,9 @@ DiamondTrap & DiamondTrap::operator = (DiamondTrap & dt) {
 DiamondTrap::DiamondTrap(DiamondTrap & dt) {
     *this = dt;
     std::cout << "copy constructor called" << std::endl;
+}
+
+void DiamondTrap::whoAmI( void ) {
+    std::cout << "DiamondTrap name : " << this -> name << std::endl;
+    std::cout << "ClapTrap    name : " << this -> ClapTrap::name << std::endl;
 }
