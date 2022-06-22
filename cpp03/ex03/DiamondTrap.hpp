@@ -8,4 +8,6 @@ class DiamondTrap : public ScavTrap, public FragTrap{
         ~DiamondTrap();
         void attack(string & target);
         void whoAmI();
+        DiamondTrap & operator = (DiamondTrap & dt);
+        DiamondTrap DiamondTrap(DiamondTrap & dt);
 };
