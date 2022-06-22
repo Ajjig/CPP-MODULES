@@ -10,7 +10,6 @@ DiamondTrap::DiamondTrap(string _name) {
 }
 
 DiamondTrap::DiamondTrap( void ) {
-    this -> ClapTrap::name = "";
     this -> name = "";
     this -> hitPoints = FragTrap::hitPoints;
     this -> energyPoints = ScavTrap::energyPoints;
@@ -25,7 +24,7 @@ DiamondTrap::~DiamondTrap() {
 void DiamondTrap::attack( string target ) {
     if (this -> hitPoints <= 0 || this -> energyPoints <= 0)
         return ;
-    std::cout << "DiamondTrap " << this -> name << " attacks" << target << std::endl;
+    std::cout << "DiamondTrap " << this -> name << " attacks " << target << std::endl;
 }
 
 DiamondTrap & DiamondTrap::operator = (DiamondTrap & dt) {
