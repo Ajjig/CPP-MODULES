@@ -30,6 +30,8 @@ void FragTrap::highFiveGuys( void ) {
     std::cout << "FragTrap " << this -> name << " offers high fives" << std::endl;
 }
 
+/*       OPERATORS          */
+
 FragTrap & FragTrap::operator = (FragTrap & ft) {
     if (this == &ft)
         return *this;
