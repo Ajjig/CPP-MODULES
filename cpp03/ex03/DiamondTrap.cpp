@@ -29,3 +29,7 @@ DiamondTrap & DiamondTrap::operator = (DiamondTrap & dt) {
     return *this
 }
 
+DiamondTrap::DiamondTrap(DiamondTrap & ft) {
+    *this = dt;
+    std::cout << "copy constructor called" << std::endl;
+}

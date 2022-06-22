@@ -9,5 +9,5 @@ class DiamondTrap : public ScavTrap, public FragTrap{
         void attack(string & target);
         void whoAmI();
         DiamondTrap & operator = (DiamondTrap & dt);
-        DiamondTrap DiamondTrap(DiamondTrap & dt);
+        DiamondTrap(DiamondTrap & dt);
 };
