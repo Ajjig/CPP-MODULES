@@ -13,7 +13,7 @@ DiamondTrap::~DiamondTrap() {
     std::cout << "DiamondTrap destructor called" << std::endl;
 }
 
-void DiamondTrap::attack( string & target ) {
+void DiamondTrap::attack( string target ) {
     if (this -> hitPoints <= 0 || this -> energyPoints <= 0)
         return ;
     std::cout << "DiamondTrap " << this -> name << " attacks" << target << std::endl;

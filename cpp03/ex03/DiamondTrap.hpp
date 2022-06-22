@@ -6,7 +6,7 @@ class DiamondTrap : public ScavTrap, public FragTrap{
         DiamondTrap( void );
         DiamondTrap(string _name);
         ~DiamondTrap();
-        void attack(string & target);
+        void attack(string target);
         void whoAmI();
         DiamondTrap & operator = (DiamondTrap & dt);
         DiamondTrap(DiamondTrap & dt);
