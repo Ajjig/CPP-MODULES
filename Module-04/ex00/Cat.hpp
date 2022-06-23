@@ -5,5 +5,5 @@ class Cat : public Animal {
         Cat(string type);
         ~Cat();
         Cat( void );
-        virtual void makeSound() const;
+        void makeSound() const;
 };
