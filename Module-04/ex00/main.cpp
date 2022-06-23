@@ -13,7 +13,9 @@ int main( void )
     j->makeSound();
     meta->makeSound();
     delete i;
+    std::cout << "==========================" << std::endl;
     delete j;
+    std::cout << "==========================" << std::endl;
     delete meta;
     /* * * * * * * * * * * * * * * * * * * * * * */
     return 0;
