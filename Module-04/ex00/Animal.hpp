@@ -6,7 +6,7 @@
 class Animal {
     public:
         Animal(string type);
-        ~Animal();
+        virtual ~Animal();
         Animal( void );
         string getType() const;
         void setType(string type);
