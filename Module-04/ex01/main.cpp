@@ -4,9 +4,9 @@
 
 int main( void )
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const Animal* meta = new Animal("_Animal_");
+    const Animal* j = new Dog("_Dog_");
+    const Animal* i = new Cat("_Cat_");
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound(); //will output the cat sound!
