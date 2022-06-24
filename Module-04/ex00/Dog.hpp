@@ -6,4 +6,6 @@ class Dog : public Animal {
         ~Dog();
         Dog( void );
         void makeSound() const;
+        Dog( const Dog &src );
+        Dog & operator=( const Dog &src );
 };

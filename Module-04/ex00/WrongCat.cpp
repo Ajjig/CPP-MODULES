@@ -17,3 +17,15 @@ WrongCat::~WrongCat() {
 void WrongCat::makeSound( void ) const {
     std::cout << "WrongCat is meowing..." << std::endl;
 }
+
+WrongCat & WrongCat::operator = (const WrongCat &src) {
+    if (this == &src)
+        return *this;
+    this -> _type = src._type;
+    return *this;
+}
+
+WrongCat::WrongCat(const WrongCat &src) {
+    this -> _type = src._type;
+    std::cout << "Cat copy constructor called" << std::endl;
+}

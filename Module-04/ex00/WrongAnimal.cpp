@@ -17,3 +17,16 @@ WrongAnimal::WrongAnimal( void ) {
 void WrongAnimal::makeSound( void ) const {
     std::cout << "WrongAnimal makes noise" << std::endl;
 }
+
+WrongAnimal::WrongAnimal(const WrongAnimal &src) {
+    this -> _type = src._type;
+    std::cout << "WrongAnimal copy constructor called" << std::endl;
+}
+
+WrongAnimal & WrongAnimal::operator=(const WrongAnimal &src) {
+    if (this == &src)
+        return *this;   
+    this -> _type = src._type;
+    std::cout << "WrongAnimal assignment operator called" << std::endl;
+    return * this;
+}

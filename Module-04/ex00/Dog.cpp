@@ -17,3 +17,15 @@ Dog::~Dog() {
 void Dog::makeSound() const {
     std::cout << "A dog is baeking..." << std::endl;
 }
+
+Dog & Dog::operator=(const Dog &src) {
+    if (this == &src)
+        return *this;
+    this -> type = src.type;
+    return *this;
+}
+
+Dog::Dog(const Dog &src) {
+    this -> type = src.type;
+    std::cout << "Dog copy constructor called" << std::endl;
+}

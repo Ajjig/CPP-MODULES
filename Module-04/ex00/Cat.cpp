@@ -17,3 +17,15 @@ Cat::~Cat() {
 void Cat::makeSound() const {
     std::cout << "A cat is meowing..." << std::endl;
 }
+
+Cat & Cat::operator = (const Cat &src) {
+    if (this == &src)
+        return *this;
+    this -> type = src.type;
+    return *this;
+}
+
+Cat::Cat(const Cat &src) {
+    this -> type = src.type;
+    std::cout << "Cat copy constructor called" << std::endl;
+}
