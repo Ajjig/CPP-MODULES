@@ -21,6 +21,8 @@ int main( void )
     std::cout << "===========ex01===========" << std::endl;
     Animal * dog = new Dog();
     Animal * cat = new Cat();
+    cat -> makeSound();
+    dog -> makeSound();
 
     delete dog;
     delete cat;
