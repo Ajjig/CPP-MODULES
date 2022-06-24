@@ -11,6 +11,8 @@ class Animal {
         string getType() const;
         void setType(string type);
         virtual void makeSound() const;
+        Animal(const Animal &src);
+        Animal & operator = (const Animal &src);
     protected:
         string type;
 };

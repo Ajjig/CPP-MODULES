@@ -7,6 +7,8 @@ class Cat : public Animal {
         ~Cat();
         Cat( void );
         void makeSound() const;
+        Cat( const Cat &src );
+        Cat & operator = ( const Cat &src );
     private:
         Brain * _brain;
 };

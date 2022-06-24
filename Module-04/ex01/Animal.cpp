@@ -25,3 +25,16 @@ string Animal::getType() const {
 void Animal::makeSound() const {
     std::cout << "An animal is making sound" << std::endl;
 }
+
+Animal::Animal(const Animal &src) {
+    this -> type = src.type;
+    std::cout << "Animal copy constructor called" << std::endl;
+}
+
+Animal & Animal::operator=(const Animal &rhs) {
+    if (this == &rhs)
+        return *this;   
+    this -> type = rhs.type;
+    std::cout << "Animal assignment operator called" << std::endl;
+    return * this;
+}
