@@ -4,7 +4,7 @@ INC = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 CPPCOMPILER = c++
 
-NAME = animal
+NAME = Animal_brain
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
