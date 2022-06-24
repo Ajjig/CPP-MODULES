@@ -19,6 +19,5 @@ int main( void )
     std::cout << "==========================" << std::endl;
     delete meta;
     /* * * * * * * * * * * * * * * * * * * * * * */
-    delete w;
     return 0;
 }
