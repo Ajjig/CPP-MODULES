@@ -18,5 +18,11 @@ int main( void )
     std::cout << "==========================" << std::endl;
     delete meta;
     /* * * * * * * * * * * * * * * * * * * * * * */
+    std::cout << "===========ex01===========" << std::endl;
+    Animal * dog = new Dog();
+    Animal * cat = new Cat();
+
+    delete dog;
+    delete cat;
     return 0;
 }
