@@ -1,3 +1,4 @@
+#pragma once
 #include "Animal.hpp"
 
 class Brain {
