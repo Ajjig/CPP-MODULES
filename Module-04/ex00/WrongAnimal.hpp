@@ -3,9 +3,9 @@
 class WrongAnimal {
     public:
         WrongAnimal(string _type);
-        ~WrongAnimal();
+        virtual ~WrongAnimal();
         WrongAnimal( void );
-        virtual void makeSound( void ) const;
+        void makeSound( void ) const;
     private:
         string _type;
 };
