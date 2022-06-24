@@ -19,9 +19,6 @@ int main( void )
     std::cout << "==========================" << std::endl;
     delete meta;
     /* * * * * * * * * * * * * * * * * * * * * * */
-    std::cout << "==========================" << std::endl;
-    WrongAnimal * w = new WrongCat();
-    w -> makeSound(); // this should output the wrong cat sound!
     delete w;
     return 0;
 }
