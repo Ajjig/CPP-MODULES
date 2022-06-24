@@ -1,4 +1,5 @@
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal {
     public:
@@ -6,4 +7,6 @@ class Dog : public Animal {
         ~Dog();
         Dog( void );
         void makeSound() const;
+    private:
+        Brain * _brain;
 };
