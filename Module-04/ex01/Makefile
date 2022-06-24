@@ -1,6 +1,6 @@
-CPPFILES = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+CPPFILES = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 
-INC = Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
+INC = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 CPPCOMPILER = c++
 
