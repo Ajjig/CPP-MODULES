@@ -20,6 +20,7 @@ int main( void )
     Animal * cat = new Cat();
     cat -> makeSound();
     dog -> makeSound();
+    // Animal * animal = new Animal(); uncomment this line so the program will not compile cut Animal is abstract
 
     delete dog;
     delete cat;
