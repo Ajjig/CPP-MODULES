@@ -1,6 +1,6 @@
-CPPFILES = main.cpp Bureaucrat.cpp
+CPPFILES = main.cpp Bureaucrat.cpp Form.cpp
 
-INC = Bureaucrat.hpp
+INC = Bureaucrat.hpp Form.hpp
 
 CPPCOMPILER = c++
 
