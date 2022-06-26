@@ -1,3 +1,4 @@
+#pragma once
 #include "Bureaucrat.hpp"
 
 class Form{
