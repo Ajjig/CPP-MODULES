@@ -27,8 +27,10 @@ int Form::getGradeToSign() const {
 }
 
 void Form::setGradeToSign( int const gradeToSign ) {
-    if (gradeToSign < 1 || gradeToSign > 150)
+    if (gradeToSign < 1)
         throw Form::GradeTooHighException();
+    if (gradeToSign > 150)
+        throw Form::GradeTooLowException();
     this -> _gradeToSign = gradeToSign;
 }
 
@@ -37,8 +39,10 @@ int Form::getGradeToExecute() const {
 }
 
 void Form::setGradeToExecute( int const gradeToExecute ) {
-    if (gradeToExecute < 1 || gradeToExecute > 150)
+    if (gradeToExecute < 1)
         throw Form::GradeTooHighException();
+    if (gradeToExecute > 150)
+        throw Form::GradeTooLowException();
     this -> _gradeToExecute = gradeToExecute;
 }
 
@@ -46,3 +50,16 @@ bool Form::getSigned() const {
     return this -> _isSigned;
 }
 
+void Form::beSigned(Bureaucrat const & bureaucrat) {
+    if (bureaucrat.getGrade() > this -> getGradeToSign())
+        throw Form::GradeTooLowException();
+    this -> _isSigned = true;
+}
+
+
+std::ostream & operator << (std::ostream & out, Form const & obj) {
+    out << "Form " << obj.getName() << " is " << ((obj.getSigned()) ? "" : "not ") << "signed" << std::endl
+        << "Grade to sign: " << obj.getGradeToSign() << std::endl
+        << "Grade to execute: " << obj.getGradeToExecute() << std::endl;
+    return out;
+}
