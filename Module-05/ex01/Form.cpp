@@ -56,6 +56,13 @@ void Form::beSigned(Bureaucrat const & bureaucrat) {
     this -> _isSigned = true;
 }
 
+Form & Form::operator=(Form const & obj) {
+    this -> _gradeToSign = obj.getGradeToSign();
+    this -> _gradeToExecute = obj.getGradeToExecute();
+    this -> _isSigned = obj.getSigned();
+    return *this;
+}
+
 
 std::ostream & operator << (std::ostream & out, Form const & obj) {
     out << "Form " << obj.getName() << " is " << ((obj.getSigned()) ? "" : "not ") << "signed" << std::endl
