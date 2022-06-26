@@ -1,5 +1,6 @@
 #pragma once
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 class Form{
     public :
