@@ -1,6 +1,7 @@
 #pragma once
 class Bureaucrat;
 #include "Bureaucrat.hpp"
+#include <fstream>
 
 class Form{
     public :
@@ -13,7 +14,7 @@ class Form{
         int getGradeToExecute( void ) const;
         bool getSigned( void ) const;
         void beSigned( Bureaucrat const & bureaucrat );
-        virtual void execute( void ) const = 0;
+        virtual void execute( Bureaucrat const & executor ) const = 0;
         class GradeTooHighException : public std::exception {
             public :
                 const char * what() const throw();
