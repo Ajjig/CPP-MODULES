@@ -13,6 +13,7 @@ class Form{
         int getGradeToExecute( void ) const;
         bool getSigned( void ) const;
         void beSigned( Bureaucrat const & bureaucrat );
+        virtual void action( void ) const = 0;
         class GradeTooHighException : public std::exception {
             public :
                 const char * what() const throw();
