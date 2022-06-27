@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 #define string std::string
+#include "Form.hpp"
+class Form;
 
 class Bureaucrat {
     public :
