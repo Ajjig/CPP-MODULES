@@ -13,8 +13,10 @@ Form::~Form() {
     std::cout << "Form destructor called" << std::endl;
 }
 
-Form::Form( Form const & src ) {
-    *this = src;
+Form::Form( Form const & src )
+    : _name(src._name), _gradeToSign(src._gradeToSign), _gradeToExecute(src._gradeToExecute), _isSigned(src._isSigned)
+{
+
     std::cout << "Form copy constructor called" << std::endl;
 }
 
@@ -26,24 +28,8 @@ int Form::getGradeToSign() const {
     return this -> _gradeToSign;
 }
 
-void Form::setGradeToSign( int const gradeToSign ) {
-    if (gradeToSign < 1)
-        throw Form::GradeTooHighException();
-    if (gradeToSign > 150)
-        throw Form::GradeTooLowException();
-    this -> _gradeToSign = gradeToSign;
-}
-
 int Form::getGradeToExecute() const {
     return this -> _gradeToExecute;
-}
-
-void Form::setGradeToExecute( int const gradeToExecute ) {
-    if (gradeToExecute < 1)
-        throw Form::GradeTooHighException();
-    if (gradeToExecute > 150)
-        throw Form::GradeTooLowException();
-    this -> _gradeToExecute = gradeToExecute;
 }
 
 bool Form::getSigned() const {
@@ -56,10 +42,12 @@ void Form::beSigned(Bureaucrat const & bureaucrat) {
     this -> _isSigned = true;
 }
 
-Form & Form::operator=(Form const & obj) {
-    this -> _gradeToSign = obj.getGradeToSign();
-    this -> _gradeToExecute = obj.getGradeToExecute();
-    this -> _isSigned = obj.getSigned();
+Form & Form::operator = (Form const & obj) {
+    if (this -> _gradeToSign < 1 || this -> _gradeToExecute < 1)
+        throw Form::GradeTooHighException();
+    if (this -> _gradeToSign > 150 || this -> _gradeToExecute > 150)
+        throw Form::GradeTooLowException();
+    this -> _isSigned = obj._isSigned;
     return *this;
 }
 
