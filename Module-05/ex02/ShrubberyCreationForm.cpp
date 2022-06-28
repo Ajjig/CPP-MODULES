@@ -50,6 +50,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
                               %@bd%%%bd%%:;     \n\
                                 #@%%%%%:;;\n\
                                 %@@%%%::;\n\
+                           A R G A N   T R E E \n\
                                 %@@@%(o);  . '         \n\
                                 %@@@o%;:(.,'         \n\
                             `.. %@@@o%::;         \n\
