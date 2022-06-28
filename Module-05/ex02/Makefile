@@ -1,6 +1,6 @@
-CPPFILES = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp
+CPPFILES = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
-INC = Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp
+INC = Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 
 CPPCOMPILER = c++
 
