@@ -5,6 +5,7 @@ class PresidentialPardonForm : public Form {
         PresidentialPardonForm( string const & target );
         PresidentialPardonForm( PresidentialPardonForm const & src );
         virtual ~PresidentialPardonForm( void );
+        PresidentialPardonForm * clone(string target);
         PresidentialPardonForm & operator = ( PresidentialPardonForm const & obj );
         void execute( Bureaucrat const & executor ) const;
     private :

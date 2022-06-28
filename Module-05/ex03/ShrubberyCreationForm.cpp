@@ -63,3 +63,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 
     return;
 }
+
+ShrubberyCreationForm * ShrubberyCreationForm::clone(string target) {
+    return new ShrubberyCreationForm(target);
+}

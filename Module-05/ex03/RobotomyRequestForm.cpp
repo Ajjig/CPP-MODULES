@@ -30,3 +30,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
     std::cout << this -> _target << " has been robotomized successfully." << std::endl;
     return;
 }
+
+RobotomyRequestForm * RobotomyRequestForm::clone(string target) {
+    return new RobotomyRequestForm(target);
+}

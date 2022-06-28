@@ -30,3 +30,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const {
     std::cout << this -> _target << " has been pardoned by Zaphod Beeblebrox successfully." << std::endl;
     return;
 }
+
+PresidentialPardonForm * PresidentialPardonForm::clone(string target) {
+    return new PresidentialPardonForm(target);
+}

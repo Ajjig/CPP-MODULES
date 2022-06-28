@@ -7,6 +7,7 @@ class ShrubberyCreationForm : public Form {
         virtual ~ShrubberyCreationForm( void );
         ShrubberyCreationForm & operator = ( ShrubberyCreationForm const & obj );
         void execute( Bureaucrat const & executor ) const;
+        ShrubberyCreationForm * clone(string target);
     private :
         string _target;
 };
