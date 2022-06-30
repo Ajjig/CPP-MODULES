@@ -1,0 +1,20 @@
+CPPFILES = main.cpp Bureaucrat.cpp Form.cpp
+
+INC = Bureaucrat.hpp Form.hpp
+
+CPPCOMPILER = c++
+
+NAME = form
+
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+
+OBJS = $(CPPFILES:.cpp=.o)
+
+$(NAME): $(OBJS) $(INC)
+	$(CPPCOMPILER) $(CPPFLAGS) $(OBJS) -o $(NAME)
+
+clean :
+	-@rm -rf $(OBJS)
+fclean : clean
+	-@rm -rf $(NAME)
+re : fclean $(NAME)

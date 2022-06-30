@@ -1,0 +1,36 @@
+#pragma once
+#include <string>
+#include <iostream>
+#define string std::string
+#include "Form.hpp"
+class Form;
+
+class Bureaucrat {
+    public :
+        Bureaucrat(const string name, int grade);
+        Bureaucrat(const Bureaucrat & obj);
+        Bureaucrat( void );
+        ~Bureaucrat( void );
+        Bureaucrat & operator = (const Bureaucrat & obj);
+        void incrementGrade( void );
+        void decrementGrade( void );
+        void setGrade(int grade);
+        int getGrade( void ) const;
+        string getName( void ) const;
+        void setName(string name);
+        void signForm(Form & form);
+        void executeForm(Form const & form);
+        class GradeTooHighException : public std::exception {
+            public :
+                const char * what() const throw();
+        };
+        class GradeTooLowException : public std::exception {
+            public :
+                const char * what() const throw();
+        };
+    private :
+        string _name;
+        int _grade;
+};
+
+std::ostream & operator << (std::ostream & o, const Bureaucrat & obj);
