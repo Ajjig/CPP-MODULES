@@ -13,6 +13,7 @@ class Form{
         int getGradeToSign( void ) const;
         int getGradeToExecute( void ) const;
         bool getSigned( void ) const;
+        virtual Form * clone( string target ) = 0;
         void beSigned( Bureaucrat const & bureaucrat );
         virtual void execute( Bureaucrat const & executor ) const = 0;
         class GradeTooHighException : public std::exception {
