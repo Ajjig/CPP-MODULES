@@ -35,7 +35,9 @@ Form * Intern::makeForm(string name, string target) {
     string names[] = {"RobotomyRequest", "ShrubberyCreation", "PresidentialPardon"};
     int i = 0;
     for (; name != names[i]; i++) {}
-    return i < 3 ? _forms[i] -> clone(target) : throw Intern::UnknownFormException();
+    if (i >= 3)
+        throw Intern::UnknownFormException();
+    return _forms[i] -> clone(target);
 }
 
 const char * Intern::UnknownFormException::what() const throw() {
