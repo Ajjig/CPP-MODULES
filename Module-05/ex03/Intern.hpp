@@ -1,3 +1,4 @@
+#pragma once
 #include "Form.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
