@@ -1,16 +1,14 @@
-CPPFILES = main.cpp UnknownStr.cpp
-
-INC = UnknownStr.hpp
+CPPFILES = main.cpp
 
 CPPCOMPILER = c++
 
-NAME = convert
+NAME = dynamic
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJS = $(CPPFILES:.cpp=.o)
 
-$(NAME): $(OBJS) $(INC)
+$(NAME): $(OBJS)
 	$(CPPCOMPILER) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean :
