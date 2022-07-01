@@ -15,6 +15,7 @@ class C : public Base {};
 
 
 Base * generate( void ) {
+    srand(time(NULL));
     int n = std::rand() % 3;
     switch (n) {
         case 0:
@@ -67,15 +68,10 @@ void identify(Base & p) {
 }
 
 int main( void ) {
-    for (int i = 0; i < 10; ++i) {
-        Base * p = generate();
-        identify(p);
-        delete p;
-    }
-    std::cout << "================================" << std::endl;
-    for (int i = 0; i < 10; ++i) {
-        Base * p = generate();
-        identify(*p);
-        delete p;
-    }
+    Base * p = generate();
+    std::cout << "p : ";
+    identify(p);
+    std::cout << "*p: ";
+    identify(*p);
+    delete p;
 }
