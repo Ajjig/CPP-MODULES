@@ -46,12 +46,36 @@ void identify(Base * p) {
     }
 }
 
+void identify(Base & p) {
+    try {
+        (void) dynamic_cast< A& >(p);
+        std::cout << "A" << std::endl;
+    }
+    catch(const std::exception& e) {}
+    
+    try {
+        (void )dynamic_cast< B& >(p);
+        std::cout << "B" << std::endl;
+    }
+    catch(const std::exception& e) {}
 
+    try {
+        (void) dynamic_cast< C& >(p);
+        std::cout << "C" << std::endl;
+    }
+    catch(const std::exception& e) {}
+}
 
 int main( void ) {
-    for (int i = 0; i < 30; ++i) {
+    for (int i = 0; i < 10; ++i) {
         Base * p = generate();
         identify(p);
+        delete p;
+    }
+    std::cout << "================================" << std::endl;
+    for (int i = 0; i < 10; ++i) {
+        Base * p = generate();
+        identify(*p);
         delete p;
     }
 }
