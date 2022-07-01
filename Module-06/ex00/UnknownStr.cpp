@@ -68,7 +68,7 @@ void UnknownStr::toInt() const {
 
 void UnknownStr::toDouble() const {
     double d = std::strtod(_str.c_str(), NULL);
-    std::cout << "double: " << d << std::endl;
+    std::cout << "double: " << d << (d == static_cast<double>(d) ? ".0" : "") << std::endl;
 }
 
 void UnknownStr::toChar() const {
