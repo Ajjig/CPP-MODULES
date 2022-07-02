@@ -2,7 +2,7 @@ CPPFILES = main.cpp
 
 CPPCOMPILER = c++
 
-INC = Whatever.hpp
+INC = whatever.hpp
 
 NAME = template
 
