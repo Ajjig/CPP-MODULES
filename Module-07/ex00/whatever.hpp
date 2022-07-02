@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include <iostream>
-#define string std::string
 
 template <typename T>
 void swap(T & a, T & b) {
