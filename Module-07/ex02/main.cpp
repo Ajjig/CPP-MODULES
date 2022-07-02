@@ -31,5 +31,13 @@ int main( void ) {
     catch (std::exception & e) {
         std::cout << e.what() << std::endl;
     }
+    /////////     test different types     /////////
+    Array<string> array4(10);
+    array4[0] = "Hello";
+    array4[8] = "World";
+    for (unsigned int i = 0; i < array4.size(); i++) {
+        if (array4[i] != "")
+            std::cout << array4[i] << std::endl;
+    }
     return 0;
 }
