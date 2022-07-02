@@ -2,23 +2,17 @@
 
 
 int main( void ) {
-    string sA = "Hello";
-    string sB = "World";
-    int iA = 42;
-    int iB = 69;
-    std::cout << sA << " - " << sB << std::endl;
-    ::swap< string >(sA, sB);
-    std::cout << sA << " - " << sB << std::endl;
-
-    std::cout << iA << " - " << iB << std::endl;
-    ::swap< int >(iA, iB);
-    std::cout << iA << " - " << iB << std::endl;
-
-    float fA = 42.0f;
-    float fB = 69.0f;
-    long long lA = 484573092;
-    long long lB = 6584798949;
-    std::cout << "Min: " << ::min< long long >(lA, lB) << ", " << ::min< float >(fA, fB) << std::endl;
-    std::cout << "Max: " << ::max< long long >(lA, lB) << ", " << ::max< float >(fA, fB) << std::endl;
+    int a = 2;
+    int b = 3;
+    ::swap( a, b );
+    std::cout << "a = " << a << ", b = " << b << std::endl;
+    std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+    std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+    std::string c = "chaine1";
+    std::string d = "chaine2";
+    ::swap(c, d);
+    std::cout << "c = " << c << ", d = " << d << std::endl;
+    std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+    std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
     return 0;
 }
