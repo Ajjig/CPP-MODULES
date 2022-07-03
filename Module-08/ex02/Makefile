@@ -4,7 +4,7 @@ CPPCOMPILER = c++
 
 INC = MutantStack.hpp
 
-NAME = span
+NAME = mutantStack
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
