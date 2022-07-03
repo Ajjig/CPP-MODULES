@@ -19,9 +19,8 @@ int main()
     --it;
     while (it != ite)
     {
-    std::cout << *it << std::endl;
-    ++it;
+        std::cout << *it << std::endl;
+        ++it;
     }
-    std::stack<int> s(mstack);
     return 0;
 }
