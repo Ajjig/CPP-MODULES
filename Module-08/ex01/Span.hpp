@@ -9,6 +9,10 @@ class Span {
         Span(unsigned int n);
         ~Span();
         void addNumber(int n);
+        template < typename Iter >
+        void addRange(Iter begin, Iter end) {
+            _vec.insert(_vec.begin(), begin, end);
+        }
         unsigned int shortestSpan();
         unsigned int longestSpan();
         class FullSpanException : public std::exception {
