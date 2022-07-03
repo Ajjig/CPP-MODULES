@@ -23,6 +23,8 @@ class Span {
             public :
                 const char * what() const throw() { return "Span is empty"; }
         };
+        Span(const Span & src);
+        Span & operator=(const Span & src);
     private :
         unsigned int _n;
         std::vector<int> _vec;

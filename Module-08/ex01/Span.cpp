@@ -39,3 +39,16 @@ unsigned int Span::longestSpan() {
     }
     return dist;
 }
+
+Span & Span::operator = (const Span & src) {
+    if (this == &src)
+        return *this;
+    _n = src._n;
+    _vec = src._vec;
+    return *this;
+}
+
+Span::Span(const Span & src) {
+    _n = src._n;
+    _vec = src._vec;
+}
