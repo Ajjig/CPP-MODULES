@@ -29,11 +29,13 @@ int main( void ) {
         std::cout << e.what() << std::endl; // Empty Span exception should be thrown here
     }
     std::cout << "===================== HEAVY TEST =====================" << std::endl;
-    Span s3(100000);
+    Span s3(20000);
     srand(time(NULL));
+    std::vector <int> vec(20000);
     for (int i = 0; i < 20000; i++) {
-        s3.addNumber(rand());
+        vec.push_back(rand());
     }
+    s3.addRange(vec.begin(), vec.end());
     std::cout << "shortestSpan: " << s3.shortestSpan() << std::endl;
     std::cout << "longestSpan: " << s3.longestSpan() << std::endl;
 }
