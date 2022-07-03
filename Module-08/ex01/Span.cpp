@@ -15,7 +15,7 @@ Span::~Span() {}
 
 
 unsigned int Span::shortestSpan() {
-    if (_n < 2)
+    if (_vec.size() < 2)
         throw Span::EmptySpanException();
     u_int dist = abs(_vec[0] - _vec[1]);
     for (u_int i = 0; i < _vec.size(); i++) {
@@ -28,7 +28,7 @@ unsigned int Span::shortestSpan() {
 }
 
 unsigned int Span::longestSpan() {
-    if (_n < 2)
+    if (_vec.size() < 2)
         throw Span::EmptySpanException();
     u_int dist = 0;
     for (u_int i = 0; i < _vec.size(); i++) {

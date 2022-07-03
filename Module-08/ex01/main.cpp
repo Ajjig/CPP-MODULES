@@ -14,5 +14,10 @@ int main( void ) {
     s.addNumber(7);
     std::cout << "shortestSpan: " << s.shortestSpan() << std::endl; // this should print 1
     std::cout << "longestSpan: " << s.longestSpan() << std::endl;   // this should print 19
-
+    try {
+        s.addNumber(11);
+    }
+    catch (Span::FullSpanException &e) { // Full Span exception should be thrown here
+        std::cout << e.what() << std::endl;
+    }
 }
