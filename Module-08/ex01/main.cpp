@@ -28,4 +28,12 @@ int main( void ) {
     catch (std::exception & e) {
         std::cout << e.what() << std::endl; // Empty Span exception should be thrown here
     }
+    std::cout << "===================== HEAVY TEST =====================" << std::endl;
+    Span s3(100000);
+    srand(time(NULL));
+    for (int i = 0; i < 20000; i++) {
+        s3.addNumber(rand());
+    }
+    std::cout << "shortestSpan: " << s3.shortestSpan() << std::endl;
+    std::cout << "longestSpan: " << s3.longestSpan() << std::endl;
 }
