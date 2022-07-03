@@ -1,3 +1,5 @@
+#include "MutantStack.hpp"
+
 int main()
 {
     MutantStack<int> mstack;
@@ -21,4 +23,5 @@ int main()
     ++it;
     }
     std::stack<int> s(mstack);
-return 0;
+    return 0;
+}
