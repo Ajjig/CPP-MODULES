@@ -21,6 +21,11 @@ int main(int ac, char **av)
         std::cout << "Usage: " << av[0] << " {filename} {to replace string} {replaced with}" << std::endl;
         return 0;
     }
+	if (string(av[2]) == string(""))
+	{
+		std::cout << "Cannot replace an empty string" << std::endl;
+		return 0;
+	}
     string fileName = av[1];
     std::ifstream ifile;
     std::ofstream ofile(fileName + ".replace");
